@@ -107,7 +107,6 @@ https://templatemo.com/tm-558-klassy-cafe
                                     @endif
                             </li>
                         </ul>        
-                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
