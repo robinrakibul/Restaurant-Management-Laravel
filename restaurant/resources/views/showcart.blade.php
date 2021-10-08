@@ -14,7 +14,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/js/bootstrap-notify.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/css/bootstrap-notify.css">
-<script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="http://demo.itsolutionstuff.com/plugin/bootstrap-3.min.css">
 
 
@@ -38,7 +38,7 @@ https://templatemo.com/tm-558-klassy-cafe
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     </head>
     
@@ -122,7 +122,7 @@ https://templatemo.com/tm-558-klassy-cafe
 
                 <a href="{{url('/showcart',Auth::user()->id)}}">
                    
-                    Cart{{$count}}
+                    Cart[{{$count}}]
 
                 </a>
 

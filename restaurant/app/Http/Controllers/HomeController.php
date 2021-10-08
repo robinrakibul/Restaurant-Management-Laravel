@@ -32,7 +32,7 @@ class HomeController extends Controller
         $data=food::all();
 
 
-    	return view("home",compact("data","data2"));
+    	return view("home",compact("data","data"));
     }
 
 
@@ -116,7 +116,7 @@ $count=cart::where('user_id',$id)->count();
 
             $data=cart::where('user_id',$id)->join('food', 'carts.food_id', '=' , 'food.id')->get();
 
-            return view('showcart',compact('count','data','data2'));
+            return view('showcart',compact('count','data2','data'));
 
         }
 

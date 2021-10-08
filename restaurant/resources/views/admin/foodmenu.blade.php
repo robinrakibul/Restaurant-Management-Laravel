@@ -80,7 +80,7 @@
 
             <td><a href="{{url('/deletemenu',$data->id)}}">Delete</a></td>
 
-            <td><a href="{{url('/updatemenu',$data->id)}}">Update</a></td>
+            <td><a href="{{url('/updateview',$data->id)}}">Update</a></td>
 
 
 

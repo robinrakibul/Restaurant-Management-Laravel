@@ -51,8 +51,14 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a> <a href="index.html" class="logo">
+                           
                             <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
+                        
+                        
+                            <a class="menu-trigger">
+                                <span>Menu</span>
+                        
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -86,14 +92,14 @@ https://templatemo.com/tm-558-klassy-cafe
                             
                             
                             
-                            <li class="scroll-to-section"  style="background-color: red;">
+                            <li class="scroll-to-section"  style="color:red;">
                         
 
                                 @auth
             
                             <a href="{{url('/showcart',Auth::user()->id)}}">
                                
-                                Cart{{$count}}
+                                Cart[{{$count}}]
             
                             </a>
             

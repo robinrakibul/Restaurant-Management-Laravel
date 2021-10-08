@@ -8,38 +8,70 @@ use App\Models\User;
 
 use App\Models\Food;
 
+use App\Models\Reservation;
+
+use App\Models\Foodchef;
+
+use App\Models\Order;
+
+use Illuminate\Support\Facades\Auth;
+
+
 
 class AdminController extends Controller
 {
-    public function user()
-    {
-        $data=user::all();
-        return view("admin.users",compact("data"));
-    }
-    public function deleteuser($id)
-    {
-        $data=user::find($id);
-        $data->delete();
-        return redirect()->back();
-    }
-    public function deletemenu($id)
-    {
-        $data=food::find($id);
-        $data->delete();
-        return redirect()->back();
-    }
-    public function updatemenu($id)
-    {
-        $data=food::find($id);
-        return view("admin.updatemenu",compact("data"));
-    }
-    public function foodmenu()
-    {
-       $data=food::all();
-       return view("admin.foodmenu",compact("data"));
-    }
+      
 
-    public function update(Request $request , $id)
+  public function user()
+   {
+    $data=user::all();
+   	return view("admin.users",compact("data"));
+
+   }
+
+
+
+
+  public function deleteuser($id)
+   {
+
+   	$data=user::find($id);
+   	$data->delete();
+   	return redirect()->back();
+   }
+
+   public function deletemenu($id)
+   {
+
+    $data=food::find($id);
+
+    $data->delete();
+
+    return redirect()->back();
+
+   }
+
+
+   
+     public function foodmenu()
+   {
+
+   $data = food::all();
+    return view("admin.foodmenu",compact("data"));
+
+   }
+
+
+public function updateview($id)
+{
+
+  $data=food::find($id);
+  return view("admin.updateview",compact("data"));
+
+
+}
+
+public function update(Request $request , $id)
 {
   $data=food::find($id);
 
@@ -52,7 +84,6 @@ class AdminController extends Controller
             $request->image->move('foodimage',$imagename);
 
             $data->image=$imagename;
-
 
             $data->title=$request->title;
 
@@ -67,8 +98,10 @@ class AdminController extends Controller
 
 }
 
-   
-    public function upload(Request $request)
+
+
+
+     public function upload(Request $request)
    {
 
     $data = new food;
@@ -94,6 +127,41 @@ class AdminController extends Controller
 
             return redirect()->back();
 
+
+           
+
+
    }
+
+
+public function orders()
+{
+
+  $data=order::all();
+
+
+  return view('admin.orders',compact('data'));
+}
+
+
+
+
+public function search(Request $request)
+{
+
+  $search=$request->search;
+
+  $data=order::where('name','Like','%'.$search.'%')->orWhere('foodname','Like','%'.$search.'%')
+  ->get();
+
+
+  return view('admin.orders',compact('data'));
+}
+
+
+
+
+
+
 
 }
