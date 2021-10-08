@@ -86,7 +86,27 @@ https://templatemo.com/tm-558-klassy-cafe
                             
                             
                             
-                            <li class="scroll-to-section"><a href="#">Cart (0)</a></li> 
+                            <li class="scroll-to-section"  style="background-color: red;">
+                        
+
+                                @auth
+            
+                            <a href="{{url('/showcart',Auth::user()->id)}}">
+                               
+                                Cart{{$count}}
+            
+                            </a>
+            
+                                @endauth
+            
+            
+                                @guest
+            
+                                Cart[0]
+            
+                                @endguest
+            
+                            </a></li> 
 
                             
 

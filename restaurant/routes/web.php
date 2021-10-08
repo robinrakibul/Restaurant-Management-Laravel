@@ -30,9 +30,7 @@ Route::get("/deletemenu/{id}",[AdminController::class,"deletemenu"]);
 Route::get("/updatemenu/{id}",[AdminController::class,"updatemenu"]);
 Route::get("/update/{id}",[AdminController::class,"update"]);
 Route::post("/addcart/{id}",[HomeController::class,"addcart"]);
-
-
-
+Route::get("/showcart/{id}",[HomeController::class,"showcart"]);
 
 
 
