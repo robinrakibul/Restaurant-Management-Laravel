@@ -34,7 +34,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a> <a href="index.html" class="logo">
+                        <a> <a href="/" class="logo">
                            
                             <img src="assets/images/logo.png" align="tasty cafe and restaurant">
                         
