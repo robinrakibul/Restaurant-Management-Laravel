@@ -25,6 +25,7 @@
 
   			
   			<div>
+  				<center>Upload Food Items</center><br><br>
   				<label>Title</label>
   				<input style="color:blue;" type="text" name="title" placeholder="Write a title" required>
   			</div>
@@ -55,6 +56,7 @@
 
 
       <div style="margin-bottom:200px; margin-top:80px">
+      <center>All Food Items</center><br><br>
         
         <table bgcolor="black">
           <tr>
