@@ -657,7 +657,7 @@ banner
 }
 
 #top .left-content {
-  background-image: url(../images/top-left-bg.jpg);
+  background-image: url("/assets/images/top-left.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
